@@ -1,0 +1,54 @@
+name: conda_font_gen_env
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - bzip2=1.0.8=h5eee18b_6
+  - ca-certificates=2024.3.11=h06a4308_0
+  - expat=2.6.2=h6a678d5_0
+  - ld_impl_linux-64=2.38=h1181459_1
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - libuuid=1.41.5=h5eee18b_0
+  - ncurses=6.4=h6a678d5_0
+  - openssl=3.0.13=h7f8727e_2
+  - pip=24.0=py312h06a4308_0
+  - python=3.12.1=h996f2a0_0
+  - readline=8.2=h5eee18b_0
+  - sqlite=3.45.3=h5eee18b_0
+  - tk=8.6.14=h39e8969_0
+  - tzdata=2024a=h04d1e81_0
+  - xz=5.4.6=h5eee18b_1
+  - zlib=1.2.13=h5eee18b_1
+  - pip:
+      - archspec==0.2.1
+      - boltons==23.0.0
+      - brotli==1.0.9
+      - certifi==2024.2.2
+      - cffi==1.16.0
+      - charset-normalizer==2.0.4
+      - cryptography==41.0.7
+      - distro==1.8.0
+      - idna==3.4
+      - jsonpatch==1.32
+      - jsonpointer==2.1
+      - numpy==1.26.4
+      - packaging==23.1
+      - pillow==10.3.0
+      - platformdirs==3.10.0
+      - pluggy==1.0.0
+      - pycosat==0.6.6
+      - pycparser==2.21
+      - pysocks==1.7.1
+      - requests==2.31.0
+      - ruamel-yaml==0.17.21
+      - setuptools==68.2.2
+      - tqdm==4.65.0
+      - truststore==0.8.0
+      - urllib3==2.1.0
+      - wheel==0.41.2
+      - zstandard==0.19.0
+prefix: /home/ndiwan2/miniconda3/envs/conda_font_gen_env
