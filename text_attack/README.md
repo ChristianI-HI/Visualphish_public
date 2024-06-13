@@ -4,7 +4,7 @@ There are two main components in this project:
 1. Font Generation
 2. Font Selection
 
-The Font Generation uses
+Font Generation uses
 
 
 ## Downloads
@@ -24,7 +24,6 @@ Our virtual environment files are located
 Unusally, our program uses two virtual environments. The first virtual environment is used for the font generation and the second virtual environment is used for the font selection. This is because the font generation is inspired from the trdg library which requires python 3.9
 whereas the font selection uses phishintention which requires python 3.7.4 and some very specific dependencices - detecton2 (0.6).
 
-We encourage the reviewers to start the process eraly, Although we have thoroughly tested the program and created the respective environment files with, there might be some issues with the installation of the dependencies. If you encounter any issues, please let us know.
 
 ### Environment & Setup Activation
 ```
