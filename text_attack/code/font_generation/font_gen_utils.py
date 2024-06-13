@@ -164,8 +164,7 @@ def resize_image_from_path(image1_path, image2_path, save_img_path = None):
         im2.save(save_img_path)
     return im2
 
-def resize_to_retain_ratio(source_image_path, target_image_path, min_ratio = 1.0, fix_height = False):
-    im1 = Image.open(source_image_path)
+def resize_to_retain_ratio(im1, im2, min_ratio = 1.0, fix_height = False):
     
     if fix_height == False:
         target_image_width, _  = im1.size
@@ -173,7 +172,6 @@ def resize_to_retain_ratio(source_image_path, target_image_path, min_ratio = 1.0
         _, target_image_height  = im1.size
 
     # Resizing the target image
-    im2 = Image.open(target_image_path)
     w, h = im2.size
 
     # Calculating the target image width
@@ -188,6 +186,16 @@ def resize_to_retain_ratio(source_image_path, target_image_path, min_ratio = 1.0
     # Resizing the target image
     target_size = [int(target_image_width), int(target_image_height)]
     im2 = im2.resize(target_size)
+    return im2
+
+def resize_image_from_path2(image1_path, image2_path, save_img_path = None):
+    """
+    Resizes the image
+    """
+    im1, im2 = Image.open(image1_path), Image.open(image2_path)
+    im2 = resize_to_retain_ratio(im1, im2)
+    if save_img_path:
+        im2.save(save_img_path)
     return im2
 
 if __name__ == "__main__":

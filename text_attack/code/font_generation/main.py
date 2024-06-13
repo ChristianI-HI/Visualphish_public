@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     ORIGINAL_FONT_PATH =  f"{PROJECT_PATH}/data/input/{BRAND_NAME}/orig_logo.png"
     GLOBAL_FONT_DIR = f"{PROJECT_PATH}/font_generation/fonts/"
-    OUTPUT_DIR = f"{PROJECT_PATH}/data/output/{BRAND_NAME}/logos/"
+    OUTPUT_DIR = f"{PROJECT_PATH}/data/output2/{BRAND_NAME}/logos/"
     INPUT_FILE = f"{PROJECT_PATH}/data/input/{BRAND_NAME}/font_gen/logo_text.txt"
     COLOR_INPUT_FILE = f"{PROJECT_PATH}/data/input/{BRAND_NAME}/font_gen/colors.json"
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     GLOBAL_FONT_DIR = f"{PROJECT_PATH}/data/fonts/"
     FONT_TYPE_PATHS = ["custom-fonts", "google-open-source-fonts"]
 
-    run_command_str = f"{PROJECT_PATH}/font_generation/text_generation/trdg/run.py"
+    run_command_str = f"{PROJECT_PATH}/code/font_generation/text_generation/trdg/run.py"
 
     for font_type_path in FONT_TYPE_PATHS:
         CURRENT_FONT_DIR = os.path.join(GLOBAL_FONT_DIR, font_type_path)
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         print(destination_filepath)
         
         # Create the folder if it does not exist
-        font_gen_utils.resize_image_from_path(ORIGINAL_FONT_PATH, filepath, save_img_path = destination_filepath)
+        font_gen_utils.resize_image_from_path2(ORIGINAL_FONT_PATH, filepath, save_img_path = destination_filepath)
 
         # Delete the original file
         os.remove(filepath)
