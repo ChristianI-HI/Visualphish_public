@@ -139,26 +139,27 @@ Each of these files are described in the [File Descriptions](#file-descriptions)
     - logos
       - custom-fonts
         - [FONT_NAME]
-          - [FONT_INDEX]\_[FONT_NAME].png
+          - [FONT_ID]\_[FONT_NAME].png
       - google-open-source-fonts
         - [FONT_NAME]
-          - [FONT_INDEX]\_[FONT_NAME].png
+          - [FONT_ID]\_[FONT_NAME].png
     - screenshots
       - top_[K]
         - all
-           - [FONT_INDEX]\_[FONT_NAME]\_[OCR_SIM_SCORE].png
+           - [FONT_ID]\_[FONT_NAME]\_[OCR_SIM_SCORE].png
         - failure
-           - [FONT_INDEX]\_[FONT_NAME]\_[OCR_SIM_SCORE]\_[END2END_PHISHINTENTION_SCORE].png
+           - [FONT_ID]\_[FONT_NAME]\_[OCR_SIM_SCORE]\_[END2END_PHISHINTENTION_SCORE].png
         - success
-          - [FONT_INDEX]\_[FONT_NAME]\_[OCR_SIM_SCORE]\_[END2END_PHISHINTENTION_SCORE].png
+          - [FONT_ID]\_[FONT_NAME]\_[OCR_SIM_SCORE]\_[END2END_PHISHINTENTION_SCORE].png
     - top_K_logos
-      - [FONT_INDEX]\_[FONT_NAME]\_[OCR_SIM_SCORE].png
+      - [FONT_ID]\_[FONT_NAME]\_[OCR_SIM_SCORE].png
 
-K - 
-FONT_INDEX -
-FONT_NAME - 
-OCR_SIM_SCORE - 
-END2END_PHISHINTENTION_SCORE -    
+
+FONT_NAME, BRAND_NAME and K are self explanatory.
+
+FONT_ID - This is the font_id assigned to the font. Checkout the 
+OCR_SIM_SCORE - The OCR Similarity Score of the FONT.
+END2END_PHISHINTENTION_SCORE - The End2End Final Phishintention score assigned to the font.
 
 ## Input File Descriptions
 
@@ -206,6 +207,11 @@ If the background color is not specified, we calculate an approximate background
 ## Add a new brand to attack
 
 To add a new brand to attack, you need to create a new folder in the input directory with the brand name. The folder should contain all the files mentioned in the [Input File Descriptions](#input-file-descriptions) section.
+
+
+## Time Taken
+For the end2end evaluation of one font it takes about 20 min. Therefore, for K fonts, it takes about 20 * K minutes. For the 15 brands, it takes about 5 hours.
+
 
 ## 👪 Contributing
 For the text attack, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. For any detailed clarifications/issues, please email to ndiwan2[at]illinois[dot]edu[dot].
