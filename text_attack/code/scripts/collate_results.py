@@ -16,9 +16,9 @@ def get_params():
 if __name__ == "__main__":
 
     BRAND_NAME, TOP_K = get_params()
-    results = loadJsonFile(f"{PROJECT_PATH}/data/output/{BRAND_NAME}/screenshots/top_{TOP_K}/results.json")
+    results = loadJsonFile(f"{PROJECT_PATH}/data/output2/{BRAND_NAME}/screenshots/top_{TOP_K}/results.json")
 
     print(f"----------- {BRAND_NAME} Results -----------")
     print("Success/Total")
-    print(f"{results["success"]}/{results["total"]}")
+    print(results["success"]/results["total"])
     

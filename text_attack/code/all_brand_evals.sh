@@ -12,14 +12,14 @@ FONT_GEN_ENVIRONMENT="env_font_gen"
 PHISHINTENTION_ENV="env_font_selec"
 
 # List of brands from the image
-BRANDS=("instagram" "amazon" "boa" "chase" "comcast" "docusign" "dropbox" "ebay" "google" "linkedin" "netflix" "outlook" "paypal" "spotify" "yahoo")
+BRANDS=("instagram" "amazon" "boa" "chase" "comcast" "google" "docusign" "dropbox" "ebay" "linkedin" "netflix" "outlook" "paypal" "spotify" "yahoo")
 
-# Loop through each brand and run the scripts
-# for BRAND_NAME in "${BRANDS[@]}"; do
-#     echo "Processing $BRAND_NAME"
-#     ./main_brand_evals.sh $BRAND_NAME $THRESHOLD $K $DEVICE $FONT_GEN_ENVIRONMENT $PHISHINTENTION_ENV
-#     echo "Completed processing for $BRAND_NAME"
-# done
+Loop through each brand and run the scripts
+for BRAND_NAME in "${BRANDS[@]}"; do
+    echo "Processing $BRAND_NAME"
+    ./main_brand_evals.sh $BRAND_NAME $THRESHOLD $K $DEVICE $FONT_GEN_ENVIRONMENT $PHISHINTENTION_ENV
+    echo "Completed processing for $BRAND_NAME"
+done
 
 echo "All brands processed."
 conda activate $PHISHINTENTION_ENV
