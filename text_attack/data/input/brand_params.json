@@ -1,0 +1,234 @@
+{
+    "boa": {
+        "brand_string": "Bank of America",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Bank of America+2019-08-12-10`23`13_shot.csv",
+        "original_font_path": "Bank of America+2019-08-12-10`23`13_shot.png",
+        "screenshot": "Bank of America+2019-08-12-10`23`13_shot.png",
+        "change_x": 0,
+        "change_y": 11
+    },
+    "dropbox": {
+        "brand_string": "Dropbox",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Dropbox_Inc+2019-09-02-14`30`22_shot.csv",
+        "original_font_path": "Dropbox_Inc+2019-09-02-14`30`22_shot.png",
+        "screenshot": "Dropbox_Inc+2019-09-02-14`30`22_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "chase": {
+        "brand_string": "CHASE",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Chase Personal Banking+2020-05-25-10`08`02_shot.csv",
+        "original_font_path": "Chase Personal Banking+2020-05-25-10`08`02_shot.png",
+        "screenshot": "Chase Personal Banking+2020-05-25-10`08`02_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "linkedin": {
+        "brand_string": "linkedin",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "LinkedIn Corporation+2020-05-08-03`31`13_shot.csv",
+        "original_font_path": "LinkedIn Corporation+2020-05-08-03`31`13_shot.png",
+        "screenshot": "LinkedIn Corporation+2020-05-08-03`31`13_shot.png",
+        "change_x": -5,
+        "change_y": 0
+    },
+    "outlook": {
+        "brand_string": "Outlook",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Outlook+2019-09-02-14`34`51_shot.csv",
+        "original_font_path": "Outlook+2019-09-02-14`34`51_shot.png",
+        "screenshot": "Outlook+2019-09-02-14`34`51_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "paypal": {
+        "brand_string": "PayPal",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "PayPal Inc.csv",
+        "original_font_path": "PayPal Inc.png",
+        "screenshot": "PayPal Inc.+2019-07-29-04`07`13_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "spotify": {
+        "brand_string": "Spotify",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Spotify+2020-05-01-16`19`36_shot.csv",
+        "original_font_path": "Spotify+2020-05-01-16`19`36_shot.png",
+        "screenshot": "Spotify+2020-05-01-16`19`36_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "comcast": {
+        "brand_string": "xfinity",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Comcast Corporation+2020-05-12-14`49`14_shot.csv",
+        "original_font_path": "Comcast Corporation+2020-05-12-14`49`14_shot.png",
+        "screenshot": "Comcast Corporation+2020-05-12-14`49`14_shot.png",
+        "change_x": 0,
+        "change_y": 0,
+        "x" : 927,
+        "y" : 83
+    },
+    "ebay": {
+        "brand_string": "ebay",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "eBay Inc.csv",
+        "original_font_path": "eBay Inc.png",
+        "screenshot": "eBay Inc.+2020-05-22-13`21`39.png",
+        "change_x": 6,
+        "change_y": 8
+    },
+    "google": {
+        "brand_string": "Google",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Google Inc.csv",
+        "original_font_path": "Google Inc.png",
+        "screenshot": "Google Inc.+2020-09-19-10`05`57_shot.png",
+        "change_x": 0,
+        "change_y": 0,
+        "x" : 888,
+        "y" : 47
+    },
+    "instagram": {
+        "brand_string": "Instagram",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Instagram+2020-08-30-15`20`16_shot.csv",
+        "original_font_path": "Instagram+2020-08-30-15`20`16_shot.png",
+        "screenshot": "Instagram+2020-08-30-15`20`16_shot.png",
+        "change_x": 10,
+        "change_y": 0
+    },
+    "netflix": {
+        "brand_string": "Netflix",
+        "brand_type": "text_only",
+        "patch_color": [
+            0,
+            0,
+            0
+        ],
+        "csv_file": "Netflix Inc.csv",
+        "original_font_path": "Netflix Inc.png",
+        "screenshot": "Netflix Inc.+2020-09-04-11`53`06_shot.png",
+        "change_x": 0,
+        "change_y": 0,
+        "x" : 48,
+        "y" : 12
+    },
+    "yahoo": {
+        "brand_string": "Yahoo!",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Yahoo! Inc+2020-05-21-20`54`47_shot.csv",
+        "original_font_path": "Yahoo! Inc+2020-05-21-20`54`47_shot.png",
+        "screenshot": "Yahoo! Inc+2020-05-21-20`54`47_shot.png",
+        "change_x": 0,
+        "change_y": 0,
+        "x" : 1234,
+        "y" : 103
+    },
+    "yahoo-noise": {
+        "brand_string": "Yahoo!",
+        "brand_type": "text_only",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Yahoo! Inc+2020-05-21-20`54`47_shot.csv",
+        "original_font_path": "Yahoo! Inc+2020-05-21-20`54`47_shot.png",
+        "screenshot": "Yahoo! Inc+2020-05-21-20`54`47_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "docusign": {
+        "brand_string": "DocuSign",
+        "brand_type": "text_only",
+        "patch_color": [
+            249,
+            249,
+            249
+        ],
+        "csv_file": "DocuSign+2020-06-26-12`49`39_shot.csv",
+        "original_font_path": "DocuSign+2020-06-26-12`49`39_shot.png",
+        "screenshot": "DocuSign+2020-06-26-12`49`39_shot.png",
+        "change_x": 0,
+        "change_y": 0
+    },
+    "amazon": {
+        "brand_string": "amazon",
+        "brand_type": "text_logo",
+        "patch_color": [
+            255,
+            255,
+            255
+        ],
+        "csv_file": "Amazon.csv",
+        "original_font_path": "Amazon.png",
+        "screenshot": "Amazon.com Inc.+2019-07-29-11`26`41_shot.png",
+        "change_x": 15,
+        "change_y": 0
+    }
+}
