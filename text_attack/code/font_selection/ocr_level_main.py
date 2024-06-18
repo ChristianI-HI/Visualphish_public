@@ -22,7 +22,7 @@ def get_param_file():
     parser.add_argument('--threshold', type=float, default= 0.87, help='Threshold for the siamese model')
     parser.add_argument('--k', type=int, default= 200, help='Number of Top k logos to be selected')
     parser.add_argument('--device', type=str, default= "cuda", choices = ["cuda", "cpu"], help='the device choices')
-    parser.add_argument('--logo_level_eval', type=bool, default= True, help='Whether to evaluate the logos on a logo level')
+    parser.add_argument('--logo_level_eval', type=bool, default= False, help='Whether to evaluate the logos on a logo level')
     args = parser.parse_args()
     return  args.threshold, args.k, args.brand_name, args.device, args.logo_level_eval
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     total, success = 0, 0
 
     # Get the original image and its OCR embedding
-    orig_img_path = f"{PROJECT_PATH}/data/input/instagram/orig_logo.png"
+    orig_img_path = f"{PROJECT_PATH}/data/input/{BRAND_NAME}/orig_logo.png"
     orig_ocr_embed = get_OCR_embed(orig_img_path, OCR_MODEL, imshow=False, title="OCR embedding", grayscale=False).cpu().numpy()
 
     files_list = read_write_fns.get_files_with_string_in_name_deep(ATTACK_FOLDER, ".png")
@@ -119,11 +119,10 @@ if __name__ == "__main__":
     for filepath_no, filepath in enumerate(files_list):
         filename = filepath.split("/")[-1]
         cand_font_img = Image.open(filepath)
-
+    
         cand_font_ocr_embed = get_OCR_embed(cand_font_img, OCR_MODEL, imshow=False, title="OCR embedding", grayscale=False).cpu().numpy()
 
         sim = cosine_similarity(cand_font_ocr_embed, orig_ocr_embed)
-        print("Cosine Similarity: ", sim, filepath_no, filepath)
         
         img_index = int(filename.split("_")[0])
 
@@ -136,14 +135,13 @@ if __name__ == "__main__":
             print(f"Processed {filepath_no} files")
 
     ocr_sims = sorted(ocr_sims, key = lambda x: x[0], reverse = True)
+    all_ocr_sims = sorted(all_ocr_sims, key = lambda x: x[0], reverse = True)
     top_k_sims = ocr_sims[:top_k]
 
     total, success = 0, 0
     print("---- OCR Similarity Calculated ----")
-
-    filepath = f"{TARGET_FOLDER}/all_ocr_sims.csv"
-    read_write_fns.dumpCSVfile(all_ocr_sims, filepath, verbose = True)
-
+    read_write_fns.make_directory_tree(TARGET_FOLDER)
+    read_write_fns.dumpCSVfile(all_ocr_sims, f"{TARGET_FOLDER}/all_ocr_sims.csv")
 
     if LOGO_LEVEL_EVAL:
         print("---- Evaluating on Logo Level ----")
@@ -158,7 +156,7 @@ if __name__ == "__main__":
         if LOGO_LEVEL_EVAL:
             # Get the logo phishintention similarity  
             domain_map = read_write_fns.loadPickleFile(DOMAIN_MAP_PATH)
-            _, _, logo_siam_conf = siamese_inference_logo(SIAMESE_MODEL, OCR_MODEL, domain_map, LOGO_FEATS, LOGO_FILES, candidate_img_path, t_s=0.87, grayscale=False)
+            _, _, logo_siam_conf = siamese_inference_logo(SIAMESE_MODEL, OCR_MODEL, domain_map, LOGO_FEATS, LOGO_FILES, candidate_img_path, t_s=THRESHOLD, grayscale=False)
 
             # Round the confidence to 3 decimal places
             logo_siam_conf = round(logo_siam_conf, 3)
@@ -166,9 +164,10 @@ if __name__ == "__main__":
             if logo_siam_conf < 0.87:
                 success += 1
 
+        total += 1
+
         if LOGO_LEVEL_EVAL:
             print(f"Total: {total}, Success: {success}")
         
-
-        total += 1
+        
 
